@@ -1,0 +1,151 @@
+
+        body {
+            margin: 0; /* Elimina el margen por defecto del navegador */
+            font-family: 'Segoe UI', Arial, sans-serif; /* Fuente principal para el texto */
+            background: #f6f7fb; /* Color de fondo general */
+            color: #222; /* Color del texto principal */
+        }
+        header {
+            background: #fff; /* Fondo blanco para el encabezado */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Sombra sutil debajo del header */
+            padding: 1.5em 0; /* Espaciado interno arriba y abajo */
+            text-align: center; /* Centra el contenido horizontalmente */
+        }
+        header h1 {
+            color: #5e2ced; /* Color morado para el título principal */
+            margin: 0; /* Elimina el margen por defecto */
+            font-size: 2.2em; /* Tamaño grande para el título */
+        }
+        nav {
+            margin-top: 1em; /* Espacio arriba del menú de navegación */
+        }
+        nav a {
+            color: #5e2ced; /* Color morado para los enlaces */
+            text-decoration: none; /* Quita el subrayado de los enlaces */
+            margin: 0 1em; /* Espacio horizontal entre enlaces */
+            font-weight: 5wwwww00; /* Grosor medio para el texto */
+        }
+        .hero {
+            background: linear-gradient(90deg, #5e2ced 0%, #a485fd 100%); /* Degradado morado de izquierda a derecha */
+            color: #fff; /* Texto blanco */
+            padding: 3em 1em 2em 1em; /* Espaciado interno (arriba, lados, abajo, lados) */
+            text-align: center; /* Centra el contenido */
+        }
+        .hero h2 {
+            font-size: 2em; /* Tamaño grande para el subtítulo */
+            margin-bottom: 0.5em; /* Espacio debajo del subtítulo */
+        }
+        .hero p {
+            font-size: 1.2em; /* Tamaño de fuente más grande para el párrafo */
+            margin-bottom: 1.5em; /* Espacio debajo del párrafo */
+        }
+        .hero button {
+            background: #fff; /* Fondo blanco para el botón */
+            color: #5e2ced; /* Texto morado */
+            border: none; /* Sin borde */
+            padding: 0.8em 2em; /* Espaciado interno del botón */
+            border-radius: 25px; /* Bordes redondeados */
+            font-size: 1.1em; /* Tamaño de fuente del botón */
+            font-weight: bold; /* Texto en negrita */
+            cursor: pointer; /* Cambia el cursor al pasar el mouse */
+            transition: background 0.2s; /* Transición suave al cambiar el fondo */
+        }
+        .hero button:hover {
+            background: #ece6ff; /* Cambia el fondo al pasar el mouse */
+        }
+        .features {
+            display: flex; /* Usa Flexbox para organizar las cajas */
+            flex-wrap: wrap; /* Permite que las cajas bajen si no caben */
+            justify-content: center; /* Centra las cajas horizontalmente */
+            gap: 2em; /* Espacio entre las cajas */
+            margin: 2em 0; /* Espacio arriba y abajo de la sección */
+        }
+        .feature {
+            background: #fff; /* Fondo blanco para cada caja */
+            border-radius: 16px; /* Bordes redondeados */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Sombra suave */
+            padding: 2em 1.5em; /* Espaciado interno */
+            max-width: 300px; /* Ancho máximo de la caja */
+            text-align: center; /* Centra el texto */
+        }
+        .feature h3 {
+            color: #5e2ced; /* Color morado para los títulos de las cajas */
+            margin-bottom: 0.5em; /* Espacio debajo del título */
+        }
+        footer {
+            background: #5e2ced; /* Fondo morado para el pie de página */
+            color: #fff; /* Texto blanco */
+            text-align: center; /* Centra el texto */
+            padding: 1.5em 0; /* Espaciado interno arriba y abajo */
+            margin-top: 2em; /* Espacio arriba del footer */
+        }
+        @media (max-width: 800px) {
+            .features {
+                flex-direction: column; /* Las cajas se apilan en columna en pantallas pequeñas */
+                align-items: center; /* Centra las cajas verticalmente */
+            }
+        }
+.opiniones {
+    background: #250061; /* Fondo azul oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em 2em 1em;
+}
+
+.opiniones h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.opiniones p {
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.opiniones-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.opinion {
+    background: #fff;
+    color: #222;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 2em 1.5em;
+    max-width: 300px;
+    min-width: 250px;
+    text-align: left;
+    position: relative;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+}
+
+.nombre {
+    display: block;
+    font-weight: bold;
+    color: #183ae6;
+    margin-bottom: 0.5em;
+}
+
+.estrellas {
+    color: #ffc107;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .opiniones-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+}

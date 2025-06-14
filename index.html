@@ -1,137 +1,85 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Indica que el idioma principal es español -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparte tus Suscripciones | Ejemplo</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f6f7fb;
-            color: #222;
-        }
-        header {
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            padding: 1.5em 0;
-            text-align: center;
-        }
-        header h1 {
-            color: #5e2ced;
-            margin: 0;
-            font-size: 2.2em;
-        }
-        nav {
-            margin-top: 1em;
-        }
-        nav a {
-            color: #5e2ced;
-            text-decoration: none;
-            margin: 0 1em;
-            font-weight: 500;
-        }
-        .hero {
-            background: linear-gradient(90deg, #5e2ced 0%, #a485fd 100%);
-            color: #fff;
-            padding: 3em 1em 2em 1em;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2em;
-            margin-bottom: 0.5em;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 1.5em;
-        }
-        .hero button {
-            background: #fff;
-            color: #5e2ced;
-            border: none;
-            padding: 0.8em 2em;
-            border-radius: 25px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .hero button:hover {
-            background: #ece6ff;
-        }
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2em;
-            margin: 2em 0;
-        }
-        .feature {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            padding: 2em 1.5em;
-            max-width: 300px;
-            text-align: center;
-        }
-        .feature h3 {
-            color: #5e2ced;
-            margin-bottom: 0.5em;
-        }
-        footer {
-            background: #5e2ced;
-            color: #fff;
-            text-align: center;
-            padding: 1.5em 0;
-            margin-top: 2em;
-        }
-        @media (max-width: 800px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsive en móviles -->
+    <title>Comparte tus Suscripciones</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlaza el archivo CSS para estilos -->
 </head>
 <body>
+    <!-- Encabezado principal con título y menú de navegación -->
     <header>
-        <h1>Comparte tus Suscripciones</h1>
+        <h1>Comparte tus Suscripciones</h1> <!-- Título principal de la página -->
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#funciona">Cómo funciona</a>
-            <a href="#precios">Precios</a>
-            <a href="#contacto">Contacto</a>
+            <!-- Menú de navegación con enlaces internos -->
+            <!--<a href="inicio">Inicio</a>-->
+            <a href="suscripciones.html">Suscripciones</a>
+            <a href="#blog">Blog</a>
+            <a href="ayuda.html">Centro de ayuda</a>
         </nav>
     </header>
+    <!-- Sección principal de bienvenida con llamada a la acción -->
     <section class="hero">
-        <h2>¡Ahorra compartiendo tus suscripciones!</h2>
-        <p>Encuentra personas para compartir NetX, Spofy, Mickey+ y muchas otras plataformas. Únete gratis y empieza a ahorrar.</p>
-        <button>Comenzar ahora</button>
+        <h2>¡Ahorra compartiendo tus suscripciones!</h2> <!-- Subtítulo llamativo -->
+        <p>Encuentra personas para compartir NetX, Spofy, Mickey+ y muchas otras plataformas. Únete gratis y empieza a ahorrar.</p> <!-- Descripción breve -->
+        <button>Comenzar ahora</button> <!-- Botón de acción principal -->
     </section>
+    <!-- Sección de características principales -->
     <section class="features">
         <div class="feature">
-            <h3>Fácil y Seguro</h3>
-            <p>Conecta con personas reales y comparte tus suscripciones de forma sencilla y protegida.</p>
+            <h3>Fácil y Seguro</h3> <!-- Título de la característica -->
+            <p>Conecta con personas reales y comparte tus suscripciones de forma sencilla y protegida.</p> <!-- Descripción -->
         </div>
         <div class="feature">
             <h3>Gran variedad</h3>
-            <p>Comparte o únete a grupos de NetX, Spofy, Mickey+, HBO Max, y más.</p>
+            <p>Comparte o únete a grupos de NetX, Spofy, Mickey+, OBH Mex, y más.</p>
         </div>
         <div class="feature">
             <h3>Sin comisiones ocultas</h3>
             <p>Solo pagas por tu parte, sin cargos extra ni sorpresas.</p>
         </div>
     </section>
+    <!-- Sección adicional de características -->
     <section class="features">
-    <div class="feature">
-        <h3>Pases de Batalla</h3>
-        <p>Compra y comparte pases para juegos como Dote, Brodi of Stars, Clash Inrol y más.</p>
-    </div>
-    <div class="feature">
-        <h3>Contenido Premium</h3>
-        <p>Desbloquea contenido exclusivo con precios compartidos. Más beneficios, menor costo.</p>
-    </div>
-</section>
+        <div class="feature">
+            <h3>Pases de Batalla</h3>
+            <p>Compra y comparte pases para juegos como Dote, Brodi of Stars, Clash Inrol y más.</p>
+        </div>
+        <div class="feature">
+            <h3>Contenido Premium</h3>
+            <p>Desbloquea contenido exclusivo con precios compartidos. Más beneficios, menor costo.</p>
+        </div>
+    </section>
+     <!-- Sección de opiniones de usuarios (testimonios) -->
+    <section class="opiniones" id="blog">
+        <h2>Más de <span style="color:#c94600;">100.000</span> usuarios confían en nosotros</h2> <!-- Título destacado -->
+        <p>Nos dan <strong>4,3/5</strong> en <a href="#">Google</a> y <a href="#">Trustpilot</a></p> <!-- Valoración y enlaces -->
+
+        <div class="opiniones-lista">
+            <!-- Opinión 1 -->
+            <div class="opinion">
+                <img src="img/minipekka.png" alt="Usuario 1" class="avatar"> <!-- Imagen de usuario -->
+                <span class="nombre">Darrick G.</span>
+                <p>Comparto una licencia de software de diseño gráfico con un autónomo en mi espacio de coworking. Es agradable no tener que hacer cuentas.</p>
+                <div class="estrellas">★★★★★</div>
+            </div>
+            <!-- Opinión 2 -->
+            <div class="opinion">
+                <img src="img/emmamyres.jpg" alt="Usuario 2" class="avatar">
+                <span class="nombre">Sylvie V.</span>
+                <p>Me pasé a una suscripción premium, ya no hay anuncios y solo pago un 6º compartiendo mis plazas disponibles. ¡Válido!</p>
+                <div class="estrellas">★★★★★</div>
+            </div>
+            <!-- Opinión 3 -->
+            <div class="opinion">
+                <img src="img/panamiguel.jpeg" alt="Usuario 3" class="avatar">
+                <span class="nombre">Miguel P.</span>
+                <p>Comparto una licencia de software de diseño gráfico con un autónomo en mi espacio de coworking. Es agradable no tener que hacer cuentas.</p>
+                <div class="estrellas">★★★★★</div>
+            </div>
+        </div>
+    </section>
+    <!-- Pie de página con derechos de autor -->
     <footer>
         &copy; 2025 Comparte tus Suscripciones. Todos los derechos reservados.
     </footer>
