@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlaza el archivo CSS para estilos -->
+</head>
+
+<body>
+    <section class="formulario-main">
+        <h2>Crea tu suscripción compartida!</h2>
+    <form action="#" method="post" class="formulario">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="plataforma">Plataforma:</label>
+        <select id="plataforma" name="plataforma" required>
+            <option value="">-- Selecciona --</option>
+            <option value="netflix">NetX</option>
+            <option value="spotify">Spofy</option>
+            <option value="disney">Mickey+</option>
+            <option value="hbo">OBH Mex</option>
+            <option value="Otro">Otro (especificar en detalles)</option>
+        </select>
+
+
+        <label for="detalles">Detalles adicionales:</label>
+        <textarea id="detalles" name="detalles" rows="4" cols="50"></textarea>
+
+        <button type="submit">Compartir suscripción</button>
+    </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Comparte tus Suscripciones. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
