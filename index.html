@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsive en móviles -->
     <title>Comparte tus Suscripciones</title> <!-- Título que aparece en la pestaña del navegador -->
     <link rel="stylesheet" href="css/style.css"> <!-- Enlaza el archivo CSS para estilos -->
+   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+   <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
+ 
 <body>
     <!-- Encabezado principal con título y menú de navegación -->
+     
     <header>
-        <h1>Comparte tus Suscripciones</h1> <!-- Título principal de la página -->
-        <nav>
+        <div class="logo-nombre">
+        <!-- Aquí va tu logo y nombre de la página -->
+        <img src="ruta/logo.png" alt="Logo" style="height:40px;vertical-align:middle;">
+        <span>Nombre de la página xd</span>
+    </div>
+    <button class="menu-toggle">☰</button>
+        <nav class="nav-links">
             <!-- Menú de navegación con enlaces internos -->
             <!--<a href="inicio">Inicio</a>-->
             <a href="suscripciones.html">Suscripciones</a>
             <a href="#blog">Blog</a>
             <a href="ayuda.html">Centro de ayuda</a>
+            <a href="#como-funciona">¿Como funciona?</a>
         </nav>
     </header>
     <!-- Sección principal de bienvenida con llamada a la acción -->
@@ -26,34 +38,79 @@
     </section>
     <!-- Sección de características principales -->
     <section class="features">
-        <div class="feature">
+        <div class="feature" data-aos="zoom-in">
+            <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
             <h3>Fácil y Seguro</h3> <!-- Título de la característica -->
             <p>Conecta con personas reales y comparte tus suscripciones de forma sencilla y protegida.</p> <!-- Descripción -->
+            <img src="img/seguridad.png" alt="segurity" class="hover-img">
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="zoom-in">
+            <div class="icono">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            </div>
             <h3>Gran variedad</h3>
             <p>Comparte o únete a grupos de NetX, Spofy, Mickey+, OBH Mex, y más.</p>
+            <img src="img/compartir.png" alt="compartir suscripciones" class="hover-img">
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="zoom-in">
+            <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            </div>
             <h3>Sin comisiones ocultas</h3>
             <p>Solo pagas por tu parte, sin cargos extra ni sorpresas.</p>
-        </div>
-    </section>
-    <!-- Sección adicional de características -->
-    <section class="features">
-        <div class="feature">
+            <img src="img/comisiones.png" alt="comisiones" class="hover-img">
+        </div>   
+        <div class="feature" data-aos="zoom-in">
+            <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad2-icon lucide-gamepad-2"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+            </div>
             <h3>Pases de Batalla</h3>
             <p>Compra y comparte pases para juegos como Dote, Brodi of Stars, Clash Inrol y más.</p>
+            <img src="img/fornite.png" alt="pases de batalla" class="hover-img">
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="zoom-in">
+            <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy-icon lucide-trophy"><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/></svg>
+            </div>
             <h3>Contenido Premium</h3>
             <p>Desbloquea contenido exclusivo con precios compartidos. Más beneficios, menor costo.</p>
+            <img src="img/image.png" alt="vip" class="hover-img">
         </div>
     </section>
+    <section id="como-funciona" class="como-funciona">
+        <h4>4 pasos sencillos</h4>
+        <h2>¿Cómo funciona?</h2>
+        <div class="como-funciona-flex">
+            <div class="pasos">
+                <div class="paso" data-aos="fade-down">
+                    <h3>1. Registrate</h3>
+                    <p>Crea tu cuenta en pocos segundos para comenzar a compartir o unirte a suscripciones.</p>
+                </div>
+                <div class="paso" data-aos="fade-down">
+                    <h3>2. Explora o publica</h3>
+                    <p>Busca suscripciones disponibles o publica la tuya para compartir con otros.</p>
+                </div>
+                <div class="paso" data-aos="fade-down">
+                    <h3>3. Conecta con otros</h3>
+                    <p>Chatea y coordina con personas reales, de forma segura.</p>
+                </div>
+                <div class="paso" data-aos="fade-down">
+                    <h3>4. Disfruta y ahorra</h3>
+                    <p>Únete al grupo y empieza a disfrutar de tus plataformas favoritas pagando menos.</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KsB9_hnqGDc?si=PoO6yvRNpI4mnEBt" title="video explicando" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
      <!-- Sección de opiniones de usuarios (testimonios) -->
     <section class="opiniones" id="blog">
         <h2>Más de <span style="color:#c94600;">150.000</span> usuarios confían en nosotros</h2> <!-- Título destacado -->
-        <p>Nos dan <strong>4,6/5</strong> en <a href="#">Google</a> y <a href="#">Trustpilot</a></p> <!-- Valoración y enlaces -->
+        <p>Nos dan <strong>4,6/5</strong> en <span class="fake-link">Google</span> y <span class="fake-link">Trustpilot</span></p>
 
         <div class="opiniones-lista">
             <!-- Opinión 1 -->
@@ -83,5 +140,10 @@
     <footer>
         &copy; 2025 Comparte tus Suscripciones. Todos los derechos reservados.
     </footer>
+    <script src="css/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Inicia la librería
+</script>
 </body>
 </html>

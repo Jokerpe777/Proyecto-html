@@ -9,21 +9,59 @@
             background: #fff; /* Fondo blanco para el encabezado */
             box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Sombra sutil debajo del header */
             padding: 1.5em 0; /* Espaciado interno arriba y abajo */
-            text-align: center; /* Centra el contenido horizontalmente */
+            display: flex; /* Centra el contenido horizontalmente */
+            align-items: center;
+            justify-content: flex-start; /* Alinea los hijos al inicio (izquierda) */
+            gap: 2em; /* Espacio entre el logo y el menú */
+            padding-left: 2em;
+            padding-right: 2em; /* Espacio a los lados del header */
         }
         header h1 {
             color: #5e2ced; /* Color morado para el título principal */
             margin: 0; /* Elimina el margen por defecto */
             font-size: 2.2em; /* Tamaño grande para el título */
         }
+        html{
+            scroll-behavior: smooth;
+        }
+        .menu-toggle {
+  display: none; /* Oculto por defecto */
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #5e2ced;
+  cursor: pointer;
+}
+
+/* Mostrar botón solo en pantallas pequeñas */
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: block;
+    flex-direction: row;
+  }
+
+  .nav-links {
+    display: none; /* Oculta los enlaces por defecto */
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
         nav {
-            margin-top: 1em; /* Espacio arriba del menú de navegación */
+            margin-top: 1em;
+            margin-bottom: 1em;
         }
         nav a {
             color: #5e2ced; /* Color morado para los enlaces */
             text-decoration: none; /* Quita el subrayado de los enlaces */
             margin: 0 1em; /* Espacio horizontal entre enlaces */
             font-weight: 5wwwww00; /* Grosor medio para el texto */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Subraya el enlace al pasar el mouse */
         }
         .hero {
             background: linear-gradient(90deg, #5e2ced 0%, #a485fd 100%); /* Degradado morado de izquierda a derecha */
@@ -63,21 +101,76 @@
         .feature {
             background: #fff; /* Fondo blanco para cada caja */
             border-radius: 16px; /* Bordes redondeados */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Sombra suave */
+            box-shadow: 0 2px 8px rgba(26, 1, 1, 0.505); /* Sombra suave */
             padding: 2em 1.5em; /* Espaciado interno */
             max-width: 300px; /* Ancho máximo de la caja */
             text-align: center; /* Centra el texto */
         }
         .feature h3 {
             color: #5e2ced; /* Color morado para los títulos de las cajas */
-            margin-bottom: 0.5em; /* Espacio debajo del título */
+            margin-bottom: 1em; /* Espacio debajo del título */
+            margin-top: 0.3em;
         }
-        footer {
+        .feature p{
+            margin-top: 0.5em;
+        }
+        .icono {
+  margin-bottom: 0.2em;
+  margin-top: 0.5em; /* Espacio arriba del icono */
+}
+.icono svg {
+  width: 45px;
+  height: 45px;
+  stroke: #5e2ced;
+}
+.feature {
+  position: relative; /* Para poder posicionar la imagen dentro */
+  overflow: hidden;   /* Oculta lo que se salga de la caja */
+}
+
+/* Imagen oculta por defecto */
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Para que la imagen llene sin deformarse */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+/* Cuando el mouse está encima, la imagen aparece */
+.feature:hover .hover-img {
+  opacity: 1;
+}
+
+/* Para asegurar que el texto quede por encima de la imagen */
+.feature h3,
+.feature p {
+  position: relative;
+  z-index: 1;
+}
+        
+.fake-link {
+  color: #1ea737;           /* Color azul de enlace */
+  text-decoration: underline;/* Línea debajo */
+  font-weight: bold;
+  text-underline-offset: 3px;/* Separación de la línea */
+}   
+.opiniones {
+    background: #250061; /* Fondo azul oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em 2em 1em;
+}
+footer {
             background: #5e2ced; /* Fondo morado para el pie de página */
             color: #fff; /* Texto blanco */
             text-align: center; /* Centra el texto */
             padding: 1.5em 0; /* Espaciado interno arriba y abajo */
-            margin-top: 2em; /* Espacio arriba del footer */
+         
         }
         @media (max-width: 800px) {
             .features {
@@ -85,13 +178,6 @@
                 align-items: center; /* Centra las cajas verticalmente */
             }
         }
-.opiniones {
-    background: #250061; /* Fondo azul oscuro */
-    color: #fff;
-    text-align: center;
-    padding: 3em 1em 2em 1em;
-}
-
 .opiniones h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
@@ -153,6 +239,62 @@
         flex-direction: column;
         align-items: center;
     }
+    .como-funciona-flex {
+        flex-wrap: wrap;
+        align-items: center; /* Centra los elementos */
+        gap: 1em;
+    }
+    .video {
+        order: 2;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    margin-top: 1em;
+    justify-content: center;
+  }
+  .video iframe {
+    width: 100%;
+  max-width: 360px;
+  height: 200px;
+  border-radius: 8px;
+  }
+  .pasos {
+    order: 1;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .paso {
+    max-width: 95vw;      /* La caja no será más ancha que la pantalla */
+    min-width: 0;
+    width: 100%;
+    padding: 1.2em;       /* Menos padding para móviles */
+    box-sizing: border-box;
+  }
+  header {
+    display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo a la izq, nav a la der */
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5em 2em; /* Espacio a los lados */
+  gap: 2em;
+  }
+  nav {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+  nav a {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0;
+  }
 }
 .formulario-main {
     background: #fff; /* Fondo blanco para el formulario */
@@ -198,4 +340,69 @@
 }
 .formulario button:hover {
     background: #4c1bbf; /* Cambia el fondo al pasar el mouse */
+}
+.como-funciona {
+     padding: 3em 1em;
+  background-color: #ead0f7;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.como-funciona-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2em;
+}
+.como-funciona h2 {
+  color: #5e2ced;
+  margin-bottom: 2em;
+  font-size: 3em;
+  margin-top: 0em;
+}
+.como-funciona h4 {
+  color: #0a0323;
+  font-size: 1em;
+    font-weight: normal;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
+.pasos {
+flex: 2 1 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  
+}
+.video {
+  flex: 1 1 320px;
+  display: flex;
+  max-width: 500px;
+  min-width: 350px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.paso {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(83, 23, 224, 0.566);
+  padding: 2em;
+  max-width: 250px;
+  flex: 1 1 200px;
+}
+
+.paso h3 {
+  color: #5e2ced;
+  margin-bottom: 0.5em;
+}
+
+.paso p {
+  color: #555;
+  font-size: 1em;
 }
