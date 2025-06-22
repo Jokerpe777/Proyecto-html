@@ -5,17 +5,35 @@
             background: #f6f7fb; /* Color de fondo general */
             color: #222; /* Color del texto principal */
         }
-        header {
-            background: #fff; /* Fondo blanco para el encabezado */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Sombra sutil debajo del header */
-            padding: 1.5em 0; /* Espaciado interno arriba y abajo */
-            display: flex; /* Centra el contenido horizontalmente */
-            align-items: center;
-            justify-content: flex-start; /* Alinea los hijos al inicio (izquierda) */
-            gap: 2em; /* Espacio entre el logo y el menú */
-            padding-left: 2em;
-            padding-right: 2em; /* Espacio a los lados del header */
-        }
+     header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1.5em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo a la izq, nav a la der */
+  flex-wrap: wrap;
+}
+
+/* Estilo para el contenedor del logo y nombre */
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 0.6em; /* espacio entre logo y nombre */
+}
+
+/* Nav más centrado y con espacio */
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+    margin-left: auto; /* Empuja el nav hacia la derecha */
+}
+/* Solo en escritorio (más de 800px), mueve un poco al centro */
+@media (min-width: 801px) {
+  .nav-links {
+    transform: translateX(-200px);
+  }
+}
         header h1 {
             color: #5e2ced; /* Color morado para el título principal */
             margin: 0; /* Elimina el margen por defecto */
