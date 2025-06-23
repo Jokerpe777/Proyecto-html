@@ -21,6 +21,24 @@
   align-items: center;
   gap: 0.6em; /* espacio entre logo y nombre */
 }
+.logo-nombre span {
+   font-family: 'Poppins', sans-serif; /* o Roboto, Montserrat, etc. */
+  font-size: 1.5em;
+  font-weight: 600;
+   color: #5e2ced;
+  background: linear-gradient(to right, #5e2ced, #a485fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* Nav más centrado y con espacio */
 .nav-links {
@@ -95,20 +113,35 @@
             font-size: 1.2em; /* Tamaño de fuente más grande para el párrafo */
             margin-bottom: 1.5em; /* Espacio debajo del párrafo */
         }
-        .hero button {
-            background: #fff; /* Fondo blanco para el botón */
-            color: #5e2ced; /* Texto morado */
-            border: none; /* Sin borde */
-            padding: 0.8em 2em; /* Espaciado interno del botón */
-            border-radius: 25px; /* Bordes redondeados */
-            font-size: 1.1em; /* Tamaño de fuente del botón */
-            font-weight: bold; /* Texto en negrita */
-            cursor: pointer; /* Cambia el cursor al pasar el mouse */
-            transition: background 0.2s; /* Transición suave al cambiar el fondo */
-        }
-        .hero button:hover {
-            background: #ece6ff; /* Cambia el fondo al pasar el mouse */
-        }
+
+
+.btn {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: none;
+  border: 2px solid #2b0461;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.liquid {
+  background: linear-gradient(#490291 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #fff;
+}
+       
         .features {
             display: flex; /* Usa Flexbox para organizar las cajas */
             flex-wrap: wrap; /* Permite que las cajas bajen si no caben */
@@ -312,6 +345,11 @@ footer {
     width: 100%;
     text-align: center;
     padding: 0.5em 0;
+  }
+  .como-funciona h2{
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 .formulario-main {
