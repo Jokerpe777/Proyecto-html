@@ -1,36 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Ayuda</title>
-</head>
-<style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f6f7fb;
-            color: #222;
-        }
-        h1 {
-            color: #5e2ced;
-            text-align: center;
-            margin-top: 2em;
-        }
-        p {
-            text-align: center;
-            margin: 1em 0;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
+
+    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f7fb;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(90deg, #5e2ced 0%, #a485fd 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.faq h2,
+.contacto h2 {
+  color: #5e2ced;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #a485fd;
+  box-shadow: 0 2px 6px rgba(94,44,237,0.06);
+  border-radius: 8px;
+}
+
+.faq-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #5e2ced;
+}
+
+.contacto {
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #a485fd;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(94,44,237,0.06);
+}
+
+.contacto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto li {
+  margin-bottom: 0.5rem;
+}
+
+.contacto a {
+  color: #5e2ced;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.contacto a:hover {
+  color: #a485fd;
+  text-decoration: underline;
+}
+
+footer {
+  background: #5e2ced;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em 0;
+  margin-top: 2em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+}
     </style>
+</head>
 <body>
-     <h1>Estamos construyendo!</h1>
-     <p>Pronto estará listo</p>
-    <img src="img/construccion.png" alt="" width="100%" height="100%">
+    <header>
+      <h1>Centro de Ayuda de Subnexu</h1>
+      <p>¿Tienes dudas? Encuentra respuestas o contáctanos.</p>
+    </header>
+
+    <main>
+      <section class="faq">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+          <h3>¿Cómo puedo compartir una suscripción?</h3>
+          <p>Haz clic en “Comenzar ahora” desde la página principal y llena el formulario con los datos de tu suscripción.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Es seguro compartir mi cuenta?</h3>
+          <p>En Subnexu priorizamos la seguridad. Te recomendamos compartir con usuarios verificados y cambiar tu contraseña regularmente.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué métodos de pago aceptan?</h3>
+          <p>Aceptamos Yape, Plin, tarjetas y transferencias. Pronto añadiremos más opciones.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo cancelar una suscripción compartida?</h3>
+          <p>Sí, puedes cancelarla desde tu cuenta en cualquier momento.</p>
+        </div>
+      </section>
+
+      <section class="contacto">
+        <h2>¿Necesitas más ayuda?</h2>
+        <p>Contáctanos por los siguientes medios:</p>
+        <ul>
+          <li>📧 Correo: <a href="mailto:soporte@subnexu.com">soporte@subnexu.com</a></li>
+          <li>💬 WhatsApp: <a href="https://wa.me/51999999999" target="_blank">+51 999 999 999</a></li>
+          <li>📱 Instagram: <a href="https://instagram.com/subnexu" target="_blank">@subnexu</a></li>
+        </ul>
+        <p><em>Pronto habilitaremos nuestro chat en vivo.</em></p>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Subnexu. Todos los derechos reservados.
+    </footer>
 </body>
 </html>

@@ -1,36 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suscripciones</title>
+    <title>Suscripciones | Subnexu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f6f7fb;
-            color: #222;
-        }
-        h1 {
-            color: #5e2ced;
-            text-align: center;
-            margin-top: 2em;
-        }
-        p {
-            text-align: center;
-            margin: 1em 0;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
+      .anti-plazas {
+          color: red;
+          font-weight: bold;
+      }
     </style>
 </head>
 <body>
-    <h1>Estamos construyendo!</h1>
-    <p>Pronto estará listo</p>
-    <img src="img/construccion.png" alt="" width="100%" height="100%">
+    <header>
+        <div class="logo-nombre">
+            <img src="img/logo3.jpg" alt="Logo" style="height:100px;vertical-align:middle;">
+            <span>Subnexu</span>
+        </div>
+        <button class="menu-toggle">☰</button>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="suscripciones.html">Suscripciones</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="ayuda.html">Centro de ayuda</a>
+            <a href="index.html#como-funciona">¿Cómo funciona?</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Explora y comparte tus suscripciones favoritas</h2>
+        <p>Encuentra personas para compartir plataformas como NetX, Spofy, Mickey+, OBH Mex y muchas más. ¡Ahorra y disfruta más!</p>
+    </section>
+    <main style="max-width:1200px;margin:2em auto;">
+        <h2 style="color:#5e2ced;text-align:center;margin-bottom:1em;">Suscripciones populares</h2>
+        <div class="subscription-grid">
+  <div class="subscription-card">
+    <img src="img/netflix.png" alt="NetX logo" class="logo-servicio">
+    <h3>NetX</h3>
+    <p class="tipo-plan">Plan Familiar</p>
+    <p class="precio">S/ 9.00 por plaza</p>
+    <p class="plazas">2 plazas disponibles</p>
+    <button class="btn-falso">Suscribirse</button>
+  </div>
+
+  <div class="subscription-card">
+    <img src="img/spot.png" alt="Spofy logo" class="logo-servicio">
+    <h3>Spofy</h3>
+    <p class="tipo-plan">Plan Premium Dúo</p>
+    <p class="precio">S/ 6.50 por usuario</p>
+    <p class="plazas">1 plaza disponible</p>
+    <button class="btn-falso">Suscribirse</button>
+  </div>
+
+  <div class="subscription-card">
+    <img src="img/disney.png" alt="Mickey+ logo" class="logo-servicio">
+    <h3>Mickey+</h3>
+    <p class="tipo-plan">Plan Anual 4K</p>
+    <p class="precio">S/ 10.00 por plaza</p>
+    <p class="plazas">3 plazas disponibles</p>
+    <button class="btn-falso">Suscribirse</button>
+  </div>
+
+  <div class="subscription-card">
+    <img src="img/brawl.png" alt="Brodi of Stars logo" class="logo-servicio">
+    <h3>Brodi of Stars</h3>
+    <p class="tipo-plan">Plan Gamers</p>
+    <p class="precio">S/ 12.00 por usuario</p>
+    <p class="plazas">5 plazas disponibles</p>
+    <button class="btn-falso">Suscribirse</button>
+  </div>
+  <div class="subscription-card">
+    <img src="img/max.png" alt="OBH Mex logo" class="logo-servicio">
+    <h3>OBH Max</h3>
+    <p class="tipo-plan">Plan Standard</p>
+    <p class="precio">S/ 7.00 por usuario</p>
+    <p class="plazas">Sin límite de plazas</p>
+    <button class="btn-falso">Suscribirse</button>
+  </div>
+  <div class="subscription-card">
+    <img src="img/dote.png" alt="Dote logo" class="logo-servicio">
+    <h3>Dote</h3>
+    <p class="tipo-plan">Plan Gamers</p>
+    <p class="precio">S/ 5.50 por usuario</p>
+    <p class="anti-plazas">Sin plazas disponibles</p>
+    <button class="btn-falso">Suscribirse</button>
+  </div>
+  <div class="subscription-card">
+    <img src="img/royale.png" alt="clash logo" class="logo-servicio">
+    <h3>Clash Inrol</h3>
+    <p class="tipo-plan">Plan Gamers</p>
+    <p class="precio">S/ 8.50 por usuario</p>
+    <p class="plazas">2 plazas disponibles</p>
+    <button class="btn-falso">Suscribirse</button>
+  </div>
+</div>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Subnexu. Todos los derechos reservados.
+    </footer>
+    <script src="css/script.js"></script>
 </body>
 </html>
