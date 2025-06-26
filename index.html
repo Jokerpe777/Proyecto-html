@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css"> <!-- Enlaza el archivo CSS para estilos -->
    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"><!--aos-->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> <!-- Enlaza la librería Swiper para carruseles -->
 </head>
  
 <body>
@@ -111,36 +111,96 @@
         <h2>Más de <span style="color:#c94600;">150.000</span> usuarios confían en nosotros</h2> <!-- Título destacado -->
         <p>Nos dan <strong>4,6/5</strong> en <span class="fake-link">Google</span> y <span class="fake-link">Trustpilot</span></p>
 
-        <div class="opiniones-lista">
+    <div class="swiper">
             <!-- Opinión 1 -->
-            <div class="opinion">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide opinion">
                 <img src="img/minipekka.png" alt="Usuario 1" class="avatar"> <!-- Imagen de usuario -->
-                <span class="nombre">Darrick G.</span>
+                <span class="nombre">Roberto G.</span>
                 <p>Comparto una licencia de software de diseño gráfico con un autónomo en mi espacio de coworking. Es agradable no tener que hacer cuentas.</p>
                 <div class="estrellas">★★★★★</div>
             </div>
+            <div class="swiper-slide opinion">
+                <img src="img/perfil4.jpg" alt="Usuario 3" class="avatar">
+                <span class="nombre">Miguel L.</span>
+                <p>Llevo meses usando la plataforma y compartir mi cuenta ha sido súper sencillo, además el soporte responde rápido ¡Muy recomendable!</p>
+                <div class="estrellas">★★★★★</div>
+            </div>
+        <div class="swiper-slide opinion">
+                <img src="img/panamiguel.jpeg" alt="Usuario 2" class="avatar">
+                <span class="nombre">Gabriela V.</span>
+                <p>No sé cómo funcionaba antes, pero ahora tampoco, aun asi me gusta mucho.</p>
+                <div class="estrellas">★★★★★</div>
+            </div>
+            <div class="swiper-slide opinion">
+                <img src="img/perfil5.jpg" alt="Usuario 4" class="avatar"> <!-- Imagen de usuario -->
+                <span class="nombre">Gustavo P.</span>
+                <p>Me uní para compartir mi suscripción de streaming y terminé conociendo gente genial. El proceso es fácil y nunca he tenido problemas.</p>
+                <div class="estrellas">★★★★★</div>
+            </div>
             <!-- Opinión 2 -->
-            <div class="opinion">
-                <img src="img/emmamyres.jpg" alt="Usuario 2" class="avatar">
-                <span class="nombre">Sylvie V.</span>
+            <div class="swiper-slide opinion">
+                <img src="img/emmamyres.jpg" alt="Usuario 5" class="avatar">
+                <span class="nombre">Emma J.</span>
                 <p>Me pasé a una suscripción premium, ya no hay anuncios y solo pago un 6º compartiendo mis plazas disponibles. ¡Válido!</p>
                 <div class="estrellas">★★★★★</div>
             </div>
             <!-- Opinión 3 -->
-            <div class="opinion">
-                <img src="img/panamiguel.jpeg" alt="Usuario 3" class="avatar">
-                <span class="nombre">Miguel P.</span>
-                <p>Comparto una licencia de software de diseño gráfico con un autónomo en mi espacio de coworking. Es agradable no tener que hacer cuentas.</p>
+            <div class="swiper-slide opinion">
+                <img src="img/perfil6.jpg" alt="Usuario 6" class="avatar">
+                <span class="nombre">Luis M.</span>
+                <p>Pensé que sería complicado encontrar personas confiables, pero todo fue seguro y ahora ahorro bastante cada mes. La experiencia ha sido buena.</p>
                 <div class="estrellas">★★★★★</div>
             </div>
         </div>
+     <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
     </section>
     <!-- Pie de página con derechos de autor -->
-    <footer>
-        &copy; 2025 Subnexu. Todos los derechos reservados.
-    </footer>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <p>&copy; 2025 Subnexu. Todos los derechos reservados.</p>
+    </div>
+    <div class="footer-section links">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos y Condiciones</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-section social">
+      <a href="https://instagram.com/subnexu" target="_blank">Instagram<i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/51999999999" target="_blank">WhatsApp<i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:soporte@subnexu.com">Email<i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
     <script src="css/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 3, // 3 opiniones visibles
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+  0: {
+    slidesPerView: 1
+  },
+  768: {
+    slidesPerView: 2
+  },
+  1024: {
+    slidesPerView: 3
+  }
+}
+  });
+</script>
 <script>
   AOS.init(); // Inicia la librería
 </script>

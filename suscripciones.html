@@ -6,12 +6,53 @@
     <title>Suscripciones | Subnexu</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
-      .anti-plazas {
-          color: red;
-          font-weight: bold;
-      }
+      .modal-compra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-contenido p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.icono-check {
+  font-size: 2.5rem;
+  color: green;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
     </style>
 </head>
 <body>
@@ -42,8 +83,8 @@
     <h3>NetX</h3>
     <p class="tipo-plan">Plan Familiar</p>
     <p class="precio">S/ 9.00 por plaza</p>
-    <p class="plazas">2 plazas disponibles</p>
-    <button class="btn-falso">Suscribirse</button>
+    <p class="plazas">Plazas disponibles: <span class="cantidad">2</span></p>
+    <button class="btn-sus">Suscribirse</button>
   </div>
 
   <div class="subscription-card">
@@ -51,8 +92,8 @@
     <h3>Spofy</h3>
     <p class="tipo-plan">Plan Premium Dúo</p>
     <p class="precio">S/ 6.50 por usuario</p>
-    <p class="plazas">1 plaza disponible</p>
-    <button class="btn-falso">Suscribirse</button>
+    <p class="plazas">Plazas disponibles: <span class="cantidad">5</span></p>
+    <button class="btn-sus">Suscribirse</button>
   </div>
 
   <div class="subscription-card">
@@ -60,8 +101,8 @@
     <h3>Mickey+</h3>
     <p class="tipo-plan">Plan Anual 4K</p>
     <p class="precio">S/ 10.00 por plaza</p>
-    <p class="plazas">3 plazas disponibles</p>
-    <button class="btn-falso">Suscribirse</button>
+    <p class="plazas">Plazas disponibles: <span class="cantidad">3</span></p>
+    <button class="btn-sus">Suscribirse</button>
   </div>
 
   <div class="subscription-card">
@@ -69,40 +110,60 @@
     <h3>Brodi of Stars</h3>
     <p class="tipo-plan">Plan Gamers</p>
     <p class="precio">S/ 12.00 por usuario</p>
-    <p class="plazas">5 plazas disponibles</p>
-    <button class="btn-falso">Suscribirse</button>
+    <p class="plazas">Plazas disponibles: <span class="cantidad">4</span></p>
+    <button class="btn-sus">Suscribirse</button>
   </div>
   <div class="subscription-card">
     <img src="img/max.png" alt="OBH Mex logo" class="logo-servicio">
     <h3>OBH Max</h3>
     <p class="tipo-plan">Plan Standard</p>
     <p class="precio">S/ 7.00 por usuario</p>
-    <p class="plazas">Sin límite de plazas</p>
-    <button class="btn-falso">Suscribirse</button>
+    <p class="plazas">Plazas disponibles: <span class="cantidad">2</span></p>
+    <button class="btn-sus">Suscribirse</button>
   </div>
   <div class="subscription-card">
     <img src="img/dote.png" alt="Dote logo" class="logo-servicio">
     <h3>Dote</h3>
     <p class="tipo-plan">Plan Gamers</p>
     <p class="precio">S/ 5.50 por usuario</p>
-    <p class="anti-plazas">Sin plazas disponibles</p>
-    <button class="btn-falso">Suscribirse</button>
+    <p class="plazas">Plazas disponibles: <span class="cantidad">2</span></p>
+    <button class="btn-sus">Suscribirse</button>
   </div>
   <div class="subscription-card">
     <img src="img/royale.png" alt="clash logo" class="logo-servicio">
     <h3>Clash Inrol</h3>
     <p class="tipo-plan">Plan Gamers</p>
     <p class="precio">S/ 8.50 por usuario</p>
-    <p class="plazas">2 plazas disponibles</p>
-    <button class="btn-falso">Suscribirse</button>
+    <p class="plazas">Plazas disponibles: <span class="cantidad">1</span></p>
+    <button class="btn-sus">Suscribirse</button>
   </div>
 </div>
 
     </main>
 
-    <footer>
-        &copy; 2025 Subnexu. Todos los derechos reservados.
-    </footer>
+     <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <p>&copy; 2025 Subnexu. Todos los derechos reservados.</p>
+    </div>
+    <div class="footer-section links">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos y Condiciones</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-section social">
+      <a href="https://instagram.com/subnexu" target="_blank">Instagram<i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/51999999999" target="_blank">WhatsApp<i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:soporte@subnexu.com">Email<i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
     <script src="css/script.js"></script>
+    <div id="modal-compra" class="modal-compra">
+  <div class="modal-contenido">
+    <div class="icono-check">✅</div>
+    <p>¡Compra procesada con éxito!</p>
+  </div>
+</div>
 </body>
 </html>

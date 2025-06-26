@@ -211,25 +211,65 @@
   font-weight: bold;
   text-underline-offset: 3px;/* Separación de la línea */
 }   
-.opiniones {
-    background: #250061; /* Fondo azul oscuro */
-    color: #fff;
-    text-align: center;
-    padding: 3em 1em 2em 1em;
+
+.footer {
+  background: #5e2ced;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95em;
 }
-footer {
-            background: #5e2ced; /* Fondo morado para el pie de página */
-            color: #fff; /* Texto blanco */
-            text-align: center; /* Centra el texto */
-            padding: 1.5em 0; /* Espaciado interno arriba y abajo */
-         
-        }
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-section a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ddd;
+}
+
+.footer-section.social i {
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer-section.links a {
+    margin-right: 1rem;
+  }
+}
+
         @media (max-width: 800px) {
             .features {
                 flex-direction: column; /* Las cajas se apilan en columna en pantallas pequeñas */
                 align-items: center; /* Centra las cajas verticalmente */
             }
         }
+.opiniones {
+    background: #250061; /* Fondo azul oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em 2em 1em;
+}
 .opiniones h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
@@ -239,13 +279,6 @@ footer {
     font-size: 1.1em;
     margin-bottom: 2em;
 }
-
-.opiniones-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-}
 .opiniones a {
     color: #63d710; /* Color blanco para los enlaces */
     font-weight: bold; /* Texto en negrita */
@@ -253,7 +286,7 @@ footer {
     display: inline-block; /* Permite aplicar padding y margin */
 }
 .opinion {
-    background: #fff;
+   background: #fff;
     color: #222;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -261,9 +294,11 @@ footer {
     max-width: 300px;
     min-width: 250px;
     text-align: left;
-    position: relative;
+    min-height: 280px; /* o el número que se vea bien */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 .avatar {
     width: 60px;
     height: 60px;
@@ -282,20 +317,71 @@ footer {
 .estrellas {
     color: #ffc107;
     font-size: 1.2em;
-    margin-top: 1em;
+    margin-bottom: 0;
+}
+.controles {
+  margin-top: 1rem;
 }
 
+.controles button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  background-color: #4a47a3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controles button:hover {
+  background-color: #3b3880;
+}
+.swiper-slide {
+  width: auto !important;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #5e2ced;       /* Cambia este color al que tú quieras */
+  font-size: 24px;      /* Ajusta tamaño: 16px, 20px, 32px, etc */
+}
+@media (max-width: 900px) {
+ .opinion,
+  .swiper-slide.opinion {
+    min-width: 70vw;
+    max-width: 91vw;
+    width: 95vw;
+    box-sizing: border-box;
+    padding: 1.2em;
+    font-size: 0.95em;
+    margin: 0 auto;
+  }
+  .swiper-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .swiper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px; /* Más pequeñas en celular */
+    color: rgba(168, 157, 157, 0.6); /* Más claras o casi invisibles */
+  }
+}
 /* Responsive */
 @media (max-width: 900px) {
-    .opiniones-lista {
-        flex-direction: column;
-        align-items: center;
-    }
     .como-funciona-flex {
         flex-wrap: wrap;
         align-items: center; /* Centra los elementos */
         gap: 1em;
     }
+    .swiper {
+  padding-left: 1em;
+  padding-right: 1em;
+}
     .video {
         order: 2;
     max-width: 100%;
@@ -515,7 +601,7 @@ flex: 2 1 350px;
   margin-bottom: 1em;
 }
 
-.btn-falso {
+.btn-sus{
   background-color: #5e2ced;
   color: #fff;
   border: none;
@@ -524,7 +610,6 @@ flex: 2 1 350px;
   cursor: pointer;
   transition: background 0.2s;
 }
-
-.btn-falso:hover {
+.btn-sus:hover{
   background-color: #4821c1;
 }
