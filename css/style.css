@@ -349,9 +349,9 @@
 @media (max-width: 900px) {
  .opinion,
   .swiper-slide.opinion {
-    min-width: 70vw;
-    max-width: 91vw;
-    width: 95vw;
+    min-width: 80vw;
+    max-width: 92vw;
+    width: 92vw;
     box-sizing: border-box;
     padding: 1.2em;
     font-size: 0.95em;
