@@ -82,15 +82,16 @@
   
   .nav-links.active {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Muestra los enlaces en columna */
     align-items: center;
-    margin-left: 5%;
+    margin-left: 0;
   }
   .logo-nombre img {
-    height: 58px !important; /* Reduce el tamaño del logo */
+    height: 50px !important; /* Reduce el tamaño del logo */
+    
   }
   .logo-nombre span {
-    font-size: 1.5em !important; /* Reduce el tamaño del nombre */
+    font-size: 1em !important; /* Reduce el tamaño del nombre */
   }
   .logo-nombre {
     gap: 0.3em;
