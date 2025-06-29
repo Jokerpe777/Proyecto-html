@@ -117,7 +117,16 @@ main {
   font-size: 1.3rem;
   margin: 0 0.5rem;
 }
-
+.input-buscador {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #a485fd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
 @media (min-width: 600px) {
   .footer-content {
     flex-direction: row;
@@ -128,6 +137,10 @@ main {
 
   .footer-section.links a {
     margin-right: 1rem;
+  }
+  .input-buscador {
+    font-size: 0.95rem;
+    padding: 0.6rem;
   }
 }
     </style>
@@ -192,6 +205,7 @@ main {
     </div>
   </div>
 </footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <script>
   // Colapsar respuestas
   document.querySelectorAll('.faq-item h3').forEach(titulo => {
@@ -210,6 +224,7 @@ main {
   const inputBuscador = document.createElement('input');
   inputBuscador.type = 'text';
   inputBuscador.placeholder = 'Buscar pregunta...';
+  inputBuscador.classList.add('input-buscador');
   inputBuscador.style.cssText = 'width: 100%; padding: 0.8rem; margin-bottom: 1.5rem; border: 2px solid #a485fd; border-radius: 8px;';
   
   const faqSection = document.querySelector('.faq');
@@ -222,6 +237,7 @@ main {
       item.style.display = match ? 'block' : 'none';
     });
   });
+  
 </script>
 </body>
 </html>

@@ -71,7 +71,7 @@
 
 /* Mostrar botón solo en pantallas pequeñas */
 @media (max-width: 800px) {
-  .menu-toggle {
+   .menu-toggle {
     display: block;
     flex-direction: row;
   }
@@ -84,6 +84,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5%;
+  }
+  .logo-nombre img {
+    height: 58px !important; /* Reduce el tamaño del logo */
+  }
+  .logo-nombre span {
+    font-size: 1.5em !important; /* Reduce el tamaño del nombre */
+  }
+  .logo-nombre {
+    gap: 0.3em;
+  }
+  header {
+    flex-direction: row;
+    align-items: center;
+    padding: 1em 0.8em;
+    gap: 0.5em;
+  }
+  .menu-toggle {
+    margin-left: 3em; /* Empuja el botón hamburguesa a la derecha */
   }
 }
         nav {
